@@ -2,3 +2,4 @@
 ## Ingeniería Web: Visión General (IWVG) DevOps
 > Este proyecto es una Plantilla de apoyo docente de la asignatura.
 
+[![CI](https://github.com/dieegopa/iwvg-devops-padilla-diego/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/dieegopa/iwvg-devops-padilla-diego/actions/workflows/ci.yml)
