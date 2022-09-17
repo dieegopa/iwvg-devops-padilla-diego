@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/iwvg-devops-3.0.0-SNAPSHOT.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/iwvg-devops-padilla-diego-3.0.0-SNAPSHOT.jar
