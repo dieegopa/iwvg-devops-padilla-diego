@@ -24,14 +24,14 @@ public class Searches {
     }
 
     public Double findFirstDecimalFractionByUserName(String name) {
-        return new UsersDatabase().findAll()
-                .filter(user -> name.equals(user.getName()))
-                .flatMap(user -> user.getFractions()
-                        .stream()
-                        .filter(fraction -> fraction.getNumerator() % fraction.getDenominator() != 0)
-                )
-                .findFirst()
-                .get()
+        return Objects.requireNonNull(new UsersDatabase().findAll()
+                        .filter(user -> name.equals(user.getName()))
+                        .flatMap(user -> user.getFractions()
+                                .stream()
+                                .filter(fraction -> fraction.getNumerator() % fraction.getDenominator() != 0)
+                        )
+                        .findFirst()
+                        .orElse(null))
                 .decimal();
     }
 
