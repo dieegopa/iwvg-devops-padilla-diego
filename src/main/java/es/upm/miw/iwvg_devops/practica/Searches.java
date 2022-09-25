@@ -1,7 +1,6 @@
 package es.upm.miw.iwvg_devops.practica;
 
 import java.util.Objects;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Searches {
@@ -24,7 +23,7 @@ public class Searches {
                 .map(User::familyNameInitial);
     }
 
-    public Double findFirstDecimalFractionByUserName(String name){
+    public Double findFirstDecimalFractionByUserName(String name) {
         return new UsersDatabase().findAll()
                 .filter(user -> name.equals(user.getName()))
                 .flatMap(user -> user.getFractions()
@@ -34,5 +33,14 @@ public class Searches {
                 .findFirst()
                 .get()
                 .decimal();
+    }
+
+    public Stream<Double> findDecimalImproperFractionByUserName(String name) {
+        return new UsersDatabase().findAll()
+                .filter(user -> name.equals(user.getName()))
+                .flatMap(user -> user.getFractions().stream()
+                        .filter(Fraction::isImproper)
+                )
+                .map(Fraction::decimal);
     }
 }

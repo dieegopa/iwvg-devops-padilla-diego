@@ -48,23 +48,21 @@ public class Fraction {
     }
 
     public Fraction add(Fraction fraction) {
-        int numerator = this.numerator * fraction.getDenominator() + fraction.getNumerator() * this.denominator;
-        int denominator = this.denominator * fraction.getDenominator();
-        return new Fraction(numerator, denominator);
+        int numeratorAdd = this.numerator * fraction.getDenominator() + fraction.getNumerator() * this.denominator;
+        int denominatorAdd = this.denominator * fraction.getDenominator();
+        return new Fraction(numeratorAdd, denominatorAdd);
     }
 
     public Fraction multiply(Fraction fraction) {
-        int numerator = this.numerator * fraction.getNumerator();
-        int denominator = this.denominator * fraction.getDenominator();
-
-        return new Fraction(numerator, denominator);
+        int numeratorMultiply = this.numerator * fraction.getNumerator();
+        int denominatorMultiply = this.denominator * fraction.getDenominator();
+        return new Fraction(numeratorMultiply, denominatorMultiply);
     }
 
     public Fraction divide(Fraction fraction) {
-        int numerator = this.numerator * fraction.getDenominator();
-        int denominator = this.denominator * fraction.getNumerator();
-
-        return new Fraction(numerator, denominator);
+        int numeratorDivide = this.numerator * fraction.getDenominator();
+        int denominatorDivide = this.denominator * fraction.getNumerator();
+        return new Fraction(numeratorDivide, denominatorDivide);
     }
 
     @Override
