@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UserTest {
+class UserTest {
     private User user;
     private List<Fraction> fractions;
 
@@ -38,7 +38,7 @@ public class UserTest {
     }
 
     @Test
-    void testAddFraction(){
+    void testAddFraction() {
         user.addFraction(new Fraction(1, 1));
         assertEquals(1, user.getFractions().size());
     }

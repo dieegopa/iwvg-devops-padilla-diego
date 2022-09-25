@@ -4,8 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class FractionTest {
+class FractionTest {
 
     private Fraction fraction;
 
@@ -15,14 +14,14 @@ public class FractionTest {
     }
 
     @Test
-    void testFractionCreate(){
+    void testFractionCreate() {
         assertEquals(1, fraction.getNumerator());
         assertEquals(1, fraction.getDenominator());
         assertEquals(Fraction.class, fraction.getClass());
     }
 
     @Test
-    void testFractionCreateParams(){
+    void testFractionCreateParams() {
         fraction = new Fraction(4, 10);
         assertEquals(4, fraction.getNumerator());
         assertEquals(10, fraction.getDenominator());
