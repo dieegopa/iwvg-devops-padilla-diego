@@ -23,4 +23,9 @@ class SearchesTest {
                 .collect(Collectors.toList()));
     }
 
+    @Test
+    void testFindFirstDecimalFractionByUserName() {
+        assertEquals(-0.20, new Searches().findFirstDecimalFractionByUserName("Ana"));
+    }
+
 }
